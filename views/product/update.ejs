@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <%- include('../component/head',{data:{title:'Product Add'}}); %>
+    </head>
+    <body>
+        <%- include("../component/menu"); %>
+        <div class="container">
+            <div class="offset-sm-3 col-6">
+                <form action="/product/<%=product.id%>" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="userName" value="<%= product.Name %>" class="form-control" placeholder="Please Enter Product Name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Price</label>
+                        <input type="text" name="Price" value="<%= product.Price %>" class="form-control" placeholder="Please Enter Product Price">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <input type="text" name="Description" class="form-control" placeholder="Enter Description" required><%=product.description%></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Update Product">
+                </form>
+            </div>
+        </div>
+        <%- include("../component/footer") %>
+    </body>
+</html>

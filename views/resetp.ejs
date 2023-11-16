@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("component/head" , {data:{title:"Reset Password"}}) %>
+</head>
+<body>
+    <form action="/reset" method="post">
+        Email:<input type="text" name="Email" required><br><br>
+        OTP:<input type="number" name="otp" required><br><br>
+        New Password:<input type="password" name="newPassword" required><br><br>
+        <input type="submit" value="Reset">
+    </form>
+    <%- include("component/footer") %>
+
+</body>
+</html>

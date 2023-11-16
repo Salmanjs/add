@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <%- include("../component/head" , {data:{title:"Product Add"}}) %>
+
+    </head>
+        <body>
+            <%- include('../component/menu') %>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card border border-dark">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Add Product</h2>
+            <form action="/product/create" method="post">
+                <div class="mb-3">
+                    <label  class="form-label">Product Name</label>
+                    <!-- <input type="text" name="userName"  placeholder="Please enter your name" required><br><br> -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" name="userName" placeholder="Enter your Product Name" class="form-control" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label">Product Price</label>
+                    <!-- <input type="text" name="Price" placeholder="Enter your price"><br><br> -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" name="Price" placeholder="Enter your Price" class="form-control" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label">Product Description</label>
+                    <!-- <input type="text" name="Description" placeholder="Enter your Description"><br><br> -->
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" name="Description" placeholder="Description" class="form-control" />
+                        </div>
+                      </div>
+                  </div>
+                        <input type="submit" value="Add Product" class="btn btn-primary">           
+                <!-- <input type="text" name="name" placeholder="Please enter your name" required><br><br>
+                <input type="text" name="price" placeholder="Enter your price" required><br><br>
+                <input type="text" name="Quantity" placeholder="Enter your Quantity" required><br><br>  -->
+            </form>
+        </div>
+    </div>
+
+    <%- include ("../component/footer") %>
+        </body>
+</html>
